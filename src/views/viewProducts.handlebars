@@ -1,0 +1,16 @@
+<div class="infoProd" >
+    <h1>Listado de Productos con handlebars </h1>
+    <div class="detalleProd">
+        <div class="product-container">
+            {{#each products}}
+            <div class="product">
+                <h2>{{this.title}} </h2>
+                <h3>Descripcion {{this.description}} </h3>
+                <p>Precio ${{this.price}} </p>
+                <button class="addToCartBtn" data-productid="{{this._id}} " >Agregar al carrito</button>
+                <a href="/detalle/{{this._id}} ">Ver Detalle </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
